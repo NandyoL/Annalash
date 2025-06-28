@@ -1,0 +1,285 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Gradiente de fundo suave (inspiração Instagram) */
+body {
+  background: linear-gradient(135deg, #fdf0f6 0%, #fce8f3 50%, #f8d7e6 100%);
+  color: #4b4b4b;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffffcc; /* branco com leve transparência */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.brand-main {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e1306c; /* tom pink Instagram */
+  user-select: none;
+}
+
+.brand-sub {
+  font-size: 0.8rem;
+  color: #8e8e8e;
+  font-style: italic;
+  user-select: none;
+  align-self: flex-end;
+  margin-bottom: 0.2rem;
+}
+
+/* Navbar direita */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.instagram-icon {
+  width: 26px;
+  height: 26px;
+  fill: #e1306c;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.instagram-icon:hover {
+  filter: brightness(1.2);
+  transform: scale(1.15);
+}
+
+.btn-agendar {
+  background: linear-gradient(45deg, #e1306c, #f56040);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  user-select: none;
+  font-size: 1rem;
+}
+
+.btn-agendar:hover {
+  background: linear-gradient(45deg, #f56040, #e1306c);
+}
+
+/* Espaço para navbar fixa */
+main {
+  padding-top: 70px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Seções */
+.section {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1.0rem;
+  margin-bottom: 0.5rem;
+  color: #d6336c;
+}
+
+.section-subtitle {
+  color: #666666;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* Portfólio grid */
+.portfolio-grid {
+  display: grid;
+  gap: 1.0rem;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 2fr));
+}
+
+.portfolio-grid img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 15px rgb(229 85 135 / 0.3);
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.25);
+}
+
+
+/* Serviços */
+.servicos {
+  margin-bottom: 5rem;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.servico-card {
+  background: #ffffffcc;
+  border: 2px solid #f5b7cf;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(239, 90, 145, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(239, 90, 145, 0.25);
+}
+
+.servico-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #e1306c;
+}
+
+.servico-nome {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 0.4rem;
+}
+
+.servico-preco {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e1306c;
+  margin-bottom: 0.3rem;
+}
+
+.servico-duracao {
+  font-size: 0.95rem;
+  color: #777777;
+}
+
+
+/* Formulário */
+.form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  text-align: left;
+}
+
+.form label {
+  font-weight: 600;
+  color: #5a5a5a;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="date"],
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 2px solid #f0a1c2;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  color: #4b4b4b;
+  transition: border-color 0.25s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form input[type="text"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="date"]:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: #e1306c;
+  outline: none;
+  box-shadow: 0 0 8px #f56040aa;
+}
+
+/* Botão submit */
+.btn-submit {
+  background: linear-gradient(45deg, #e1306c, #f56040);
+  color: white;
+  border: none;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(45deg, #f56040, #e1306c);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  border-top: 1px solid #f2c2d3;
+  margin-top: 5rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+  .navbar-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-main {
+    font-size: 1.3rem;
+  }
+
+  .brand-sub {
+    font-size: 0.7rem;
+  }
+
+  .navbar-right {
+    gap: 1rem;
+  }
+}
