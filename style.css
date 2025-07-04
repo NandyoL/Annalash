@@ -117,6 +117,8 @@ main {
   margin-bottom: 2rem;
 }
 
+
+
 /* Portfólio grid */
 .portfolio-grid {
   display: grid;
@@ -138,6 +140,40 @@ main {
   transform: scale(1.25);
 }
 
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem; /* mantém o arredondado */
+}
+
+.portfolio-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.5); /* preto translúcido */
+  color: #e1306c;
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: 600;
+  user-select: none;
+  /* para garantir que o texto apareça acima da imagem */
+  z-index: 10;
+}
+
+/* Para garantir que a imagem mantenha o efeito de escala no hover */
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.25);
+}
+
+
 
 /* Serviços */
 .servicos {
@@ -146,7 +182,7 @@ main {
 
 .servicos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -251,6 +287,13 @@ main {
 
 .btn-submit:hover {
   background: linear-gradient(45deg, #f56040, #e1306c);
+}
+
+/* mapas */
+.section-description {
+  color: #666666;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 /* Footer */

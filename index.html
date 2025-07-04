@@ -60,13 +60,32 @@
     <section id="portfolio" class="section portfolio">
       <h2 class="section-title">Nosso Portfólio</h2>
       <p class="section-subtitle">Trabalhos personalizados para realçar a sua beleza natural.</p>
+      
       <div class="portfolio-grid">
-        <img src="imagens/annalash1.jpeg" />
-        <img src="imagens/annalash2.jpeg" />
-        <img src="imagens/annalash3.jpeg" />
-        <img src="imagens/annalash4.jpeg" />
-        <img src="imagens/annalash5.jpeg" />
-        <img src="imagens/annalash6.jpeg" />
+        <div class="portfolio-item">
+        <img src="imagens/volumebrasileiro.jpeg">
+        <div class="portfolio-desc">Volume Brasileiro</div>
+        </div>
+        <div class="portfolio-item">
+        <img src="imagens/volume3d.jpeg">
+        <div class="portfolio-desc">volume 3D</div>
+        </div>
+        <div class="portfolio-item">
+        <img src="imagens/volume6d.jpeg">
+        <div class="portfolio-desc">Volume 6D</div>
+        </div>
+        <div class="portfolio-item">
+        <img src="imagens/megaegipicio.jpeg">
+        <div class="portfolio-desc">Mega Egípcio</div>
+        </div>
+        <div class="portfolio-item">
+        <img src="imagens/megabrasileiro.jpeg">
+        <div class="portfolio-desc">Mega Brasileiro</div>
+        </div>
+        <div class="portfolio-item">
+        <img src="imagens/tufosdeseda.jpeg">
+        <div class="portfolio-desc">Tufos de Seda</div>
+        </div>
       </div>
     </section>
 
@@ -77,29 +96,43 @@
 
   <div class="servicos-grid">
     <div class="servico-card">
-      <div class="servico-icon">✨</div>
-      <h3 class="servico-nome">Extensão de Cílios Clássica</h3>
-      <p class="servico-preco">R$ 120</p>
-      <p class="servico-duracao">Duração: 2h</p>
-    </div>
-    <div class="servico-card">
       <div class="servico-icon">🌸</div>
       <h3 class="servico-nome">Volume Brasileiro</h3>
-      <p class="servico-preco">R$ 180</p>
-      <p class="servico-duracao">Duração: 2h30</p>
+      <p class="servico-preco">R$ 85</p>
+      <p class="servico-duracao">Durabilidade: 14 á 21 dias</p>
     </div>
     <div class="servico-card">
       <div class="servico-icon">💎</div>
-      <h3 class="servico-nome">Volume Russo</h3>
-      <p class="servico-preco">R$ 220</p>
-      <p class="servico-duracao">Duração: 3h</p>
+      <h3 class="servico-nome">Volume 3D</h3>
+      <p class="servico-preco">R$ 90</p>
+      <p class="servico-duracao">Durabilidade: 14 á 21 dias</p>
     </div>
     <div class="servico-card">
-      <div class="servico-icon">💗</div>
-      <h3 class="servico-nome">Manutenção</h3>
-      <p class="servico-preco">R$ 80</p>
-      <p class="servico-duracao">Duração: 1h30</p>
+      <div class="servico-icon">💎</div>
+      <h3 class="servico-nome">Volume 6D</h3>
+      <p class="servico-preco">R$ 95</p>
+      <p class="servico-duracao">Durabilidade: 14 á 21 dias</p>
     </div>
+    <div class="servico-card">
+      <div class="servico-icon">🌟</div>
+      <h3 class="servico-nome">Mega Egipcio</h3>
+      <p class="servico-preco">R$ 100</p>
+      <p class="servico-duracao">Durabilidade: 30 dias</p>
+    </div>
+    <div class="servico-card">
+      <div class="servico-icon">🌟</div>
+      <h3 class="servico-nome">Mega Brasileiro</h3>
+      <p class="servico-preco">R$ 100</p>
+      <p class="servico-duracao">Durabilidade: 30 dias</p>
+    </div>
+        <div class="servico-card">
+      <div class="servico-icon">🌟</div>
+      <h3 class="servico-nome">Tufos de Seda clássico/volume</h3>
+      <p class="servico-preco">R$ 45/55</p>
+      <p class="servico-duracao">Durabilidade: 15 á 20 dias</p>
+    </div>
+
+
   </div>
 </section>
 
@@ -112,16 +145,23 @@
         <label for="nome">Nome*</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
 
-        <label for="telefone">Telefone*</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required />
+        <label for="localização">Localização*</label>
+        <select id="localizacao" name="localizacao" required>
+          <option value="" disabled selected>Escolha o salão de sua preferência</option>
+          <option>Rua Sargento nevio dos santos, 370 - Penha</option>
+          <option>Rua Coimbra, 510 - Penha Circular</option>
+        </select>
 
         <label for="servico">Serviço*</label>
         <select id="servico" name="servico" required>
           <option value="" disabled selected>Selecione um serviço</option>
-          <option>Extensão de Cílios Clássica</option>
-          <option>Volume Brasileiro</option>
-          <option>Volume Russo</option>
-          <option>Manutenção</option>
+          <option>Volume Brasileiro - R$85</option>
+          <option>Volume 3D - R$90</option>
+          <option>Volume 6D - R$95</option>
+          <option>Mega Egípcio - R$100</option>
+          <option>Mega Brasileiro - R$100</option>
+          <option>Tufos de Seda Clássico - R$45</option>
+          <option>Tufos de Seda Volume - R$55</option>
         </select>
 
         <label for="data">Data*</label>
@@ -143,6 +183,49 @@
         <button type="submit" class="btn-submit">Confirmar no WhatsApp</button>
       </form>
     </section>
+
+<!-- Primeiro mapa -->
+<section class="section">
+  <h2 class="section-title">Onde estamos</h2>
+  <h3 class="section-description">Estúdio Penha Circular</h3>
+  <h4 class="section-description">Ponto de referência: Av. Lobo Junior</h4>
+  <div id="mapa1" style="height: 300px; border-radius: 1rem; margin-bottom: -3rem;"></div>
+</section>
+
+<!-- Segundo mapa -->
+<section class="section">
+  <h3 class="section-description">Estúdio Penha</h3>
+  <h4 class="section-description">Ponto de referência: Av. Lobo Junior</h4>
+  <div id="mapa2" style="height: 300px; border-radius: 1rem;"></div>
+</section>
+
+<!-- Leaflet CSS & JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script>
+  // Primeiro mapa – Penha Circular
+  const mapa1 = L.map('mapa1').setView([-22.828221252630627, -43.282478860251054], 17);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapa1);
+  L.marker([-22.828221252630627, -43.282478860251054])
+    .addTo(mapa1)
+    .bindPopup('Rua Coimbra, 510 – Penha Circular')
+    .openPopup();
+
+  // Segundo mapa – outro endereço fictício
+  const mapa2 = L.map('mapa2').setView([-22.847639864183048, -43.28725122037502], 16);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapa2);
+  L.marker([-22.847639864183048, -43.28725122037502])
+    .addTo(mapa2)
+    .bindPopup('Rua Sargento nevio dos santos, 370 - Penha')
+    .openPopup();
+</script>
+
 
   </main>
 
