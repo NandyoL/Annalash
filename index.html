@@ -9,20 +9,20 @@
     function enviarParaWhatsApp(event) {
       event.preventDefault();
       const nome = document.getElementById("nome").value.trim();
-      const telefone = document.getElementById("telefone").value.trim();
+      const localizacao = document.getElementById("localizacao").value;
       const servico = document.getElementById("servico").value;
       const data = document.getElementById("data").value;
       const horario = document.getElementById("horario").value;
       const mensagem = document.getElementById("mensagem").value.trim();
 
-      if (!nome || !telefone || !servico || !data || !horario) {
+      if (!nome || !localizacao || !servico || !data || !horario) {
         alert("Por favor, preencha todos os campos obrigatórios.");
         return;
       }
 
       const texto = `Olá, vim pelo site e gostaria de agendar um horário:%0A` +
         `- Nome: ${nome}%0A` +
-        `- Telefone: ${telefone}%0A` +
+        `- Localização: ${document.getElementById("localizacao").value}%0A` +
         `- Serviço: ${servico}%0A` +
         `- Data: ${data}%0A` +
         `- Horário: ${horario}%0A` +
