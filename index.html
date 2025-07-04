@@ -29,6 +29,7 @@
         `- Mensagem: ${mensagem || "Nenhuma"}%0A`;
 
       const url = `https://api.whatsapp.com/send?phone=5521990658203&text=${texto}`;
+      console.log(url); // Teste no console do navegador
       window.open(url, "_blank");
     }
 
